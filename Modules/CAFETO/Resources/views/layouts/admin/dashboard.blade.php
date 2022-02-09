@@ -1,4 +1,4 @@
-@extends('cafeto::layouts.admin')
+@extends('cafeto::layouts.master')
 @section('breadcrumb')
     {{-- <li class="breadcrumb-item"><a href="#">Sales</a></li> --}}
 @endsection

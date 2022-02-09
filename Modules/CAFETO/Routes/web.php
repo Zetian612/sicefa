@@ -10,8 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::middleware(['lang'])->group(function(){
+    
 Route::prefix('cafeto')->group(function() {
-    Route::get('/index', 'CAFETOController@index')->name('cafeto.index');
-    Route::get('/developers', 'CAFETOController@developers')->name('cafeto.developers');
+    Route::get('/index', 'CAFETOController@index')->name('cefa.cafeto.index');
+    Route::get('/developers', 'CAFETOController@developers')->name('cefa.cafeto.developers');
+});
 });

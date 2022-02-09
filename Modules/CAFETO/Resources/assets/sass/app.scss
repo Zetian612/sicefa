@@ -1,0 +1,38 @@
+.main-header .navbar-nav .active{
+	background-color:#A4A4A4 !important;
+
+}
+
+#breadvar{
+	padding:8px;
+	border-radius:4px;
+    color:#4e250a !important;
+    
+
+}
+
+.breadcrumb .breadcrumb-item a{
+	color:#e0e0e0 !important;
+	text-decoration:none;
+
+}
+
+.breadcrumb li + li:before{
+	color:#000000 !important;
+}
+
+.mtop16{
+	margin-top:16px;
+}
+
+.mbottom16{
+	margin-bottom:16px;
+}
+
+#form-control-border{
+	border-top:0;
+	border-left:0;
+	border-right:0;
+	border-radius:0;
+	box-shadow:inherit
+}

@@ -25,18 +25,10 @@ class SalesController extends Controller
 
     public function search($doc)
     {
-         $client = Person::select('document','first_name')->where('document', $doc)->first();
-
-        if($client != null){
+         $client = Person::select('document','first_name','first_last_name','second_last_name')->where('document', $doc)->first();
+         
             return $client;
-        } else{
-            return null;
-        }
-
-      
-
        
-
        
     }
 

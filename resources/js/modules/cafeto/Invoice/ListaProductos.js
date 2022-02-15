@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-
-
-
-export default function ProductsInvoice(props) {
-
+export default props => {
   const { productos, setProductos } = props;
 
   const [currentProductos, setCurrentProdcutos] = useState(null);
@@ -39,7 +35,14 @@ export default function ProductsInvoice(props) {
     );
   }
 
-      {/* <span
+  return currentProductos.map((producto, index) => (
+    <div
+      key={`producto-${index}`}
+      className="d-flex justify-content-between mb-2 px-2 pb-2 border-bottom"
+    >
+      <span className="flex-grow-1">{producto.nombre}</span>
+      <span className="flex-grow-1 text-right">{producto.precio}</span>
+      <span
         className="px-2 text-danger"
         style={{
           cursor: "pointer"
@@ -52,36 +55,7 @@ export default function ProductsInvoice(props) {
         }}
       >
         <i className="fas fa-trash" />
-      </span> */}
-
-
-    return (
-        <>
-            <table className="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Qty</th>
-                        <th>Product</th>
-                        <th>Serial #</th>
-                        <th>Description</th>
-                        <th>Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {currentProductos.map((producto, index) => (
-                    <tr>
-                        <td>{index}</td>
-                        <td>{producto.name}</td>
-                        <td>{producto.precio}</td>
-                        <td>
-                            El snort testosterone trophy driving gloves handsome
-                        </td>
-                        <td>$64.50</td>
-                    </tr>
-                    ))}
-                </tbody>
-            </table>
-        </>
-    );
-}
-
+      </span>
+    </div>
+  ));
+};

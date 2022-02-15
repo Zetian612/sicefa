@@ -1,10 +1,27 @@
-import React from "react";
+import React ,{ useState, useEffect }from "react";
 import moment from "moment";
 
 import ProductsInvoice from "./ProductsInvoice";
+// import ProductsModal from "./ProductsModal";
 
 
+const dbProductos = {
+    "123": {
+      nombre: "Coca Cola",
+      precio: 12.5
+    },
+    "456": {
+      nombre: "Galletas Marías",
+      precio: 8.5
+    }
+  };
 export default function ShowInvoice(props) {
+    
+    
+
+    // Estados internos
+  const [currentListaProductos, setCurrentListaProductos] = useState(null);
+
     return (
         <>
             <div className="invoice p-3 mb-3">
@@ -40,14 +57,14 @@ export default function ShowInvoice(props) {
                     <div className="col-sm-4 invoice-col">
                         <address>
                             <strong>Cliente</strong>
-                            <br /> Nombre: 
+                            <br /> Nombre:
                             {props.data.first_name +
                                 " " +
                                 props.data.first_last_name +
                                 " " +
                                 props.data.second_last_name}
                             <br />
-                            Documento: {props.data.document }
+                            Documento: {props.data.document}
                             <br />
                             Phone: (555) 539-1037
                             <br />
@@ -70,10 +87,24 @@ export default function ShowInvoice(props) {
                 {/* /.row */}
                 {/* Table row */}
                 <div className="row">
+                    <ProductsModal
+                     onText={codigo => {
+                        const producto = dbProductos[codigo];
+          
+                        setCurrentListaProductos([
+                          ...(currentListaProductos || []),
+                          producto
+                        ]);
+                      }}
+
+                      currentProductos={currentListaProductos}
+                    />
                     <div className="col-12 table-responsive">
-
-                       <ProductsInvoice />
-
+                        <ProductsInvoice
+                            productos={currentListaProductos}
+                            setProductos={setCurrentListaProductos}
+                        />
+                        {/* <PuntoVenta /> */}
                     </div>
                     {/* /.col */}
                 </div>

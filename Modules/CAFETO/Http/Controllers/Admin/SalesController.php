@@ -15,6 +15,7 @@ class SalesController extends Controller
      */
     public function index()
     {
+
         return view('cafeto::layouts.admin.sales.home');
     }
 
@@ -26,8 +27,8 @@ class SalesController extends Controller
     public function search($doc)
     {
          $client = Person::select('document','first_name','first_last_name','second_last_name')->where('document', $doc)->first();
-         
-            return $client;
+        
+        return $client;
        
        
     }

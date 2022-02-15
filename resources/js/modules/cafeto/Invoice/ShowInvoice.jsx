@@ -1,8 +1,8 @@
 import React from "react";
 import moment from "moment";
 
-import ProductsInvoive from "./ProductsInvoive";
-import ProductsSelect from "./ProductsSelect";
+import ProductsInvoice from "./ProductsInvoice";
+
 
 export default function ShowInvoice(props) {
     return (
@@ -12,7 +12,7 @@ export default function ShowInvoice(props) {
                 <div className="row">
                     <div className="col-12">
                         <h4>
-                            <i className="fas fa-globe" /> Punto Cafe
+                            <i className="fas fa-globe" /> Punto de Cafe
                             <small className="float-right">
                                 Date: {moment().format("L")}
                             </small>
@@ -24,7 +24,6 @@ export default function ShowInvoice(props) {
 
                 <div className="row invoice-info">
                     <div className="col-sm-4 invoice-col">
-                        From
                         <address>
                             <strong>CENTRO DE FORMACIÓN AGROINDUSTRIAL.</strong>
                             <br />
@@ -41,14 +40,14 @@ export default function ShowInvoice(props) {
                     <div className="col-sm-4 invoice-col">
                         <address>
                             <strong>Cliente</strong>
-                            <br />
+                            <br /> Nombre: 
                             {props.data.first_name +
                                 " " +
                                 props.data.first_last_name +
                                 " " +
                                 props.data.second_last_name}
                             <br />
-                            San Francisco, CA 94107
+                            Documento: {props.data.document }
                             <br />
                             Phone: (555) 539-1037
                             <br />
@@ -57,7 +56,7 @@ export default function ShowInvoice(props) {
                     </div>
                     {/* /.col */}
                     <div className="col-sm-4 invoice-col">
-                        <b>Invoice #007612</b>
+                        <b>Factura N° 007612</b>
                         <br />
                         <br />
                         <b>Order ID:</b> 4F3S8J
@@ -70,11 +69,10 @@ export default function ShowInvoice(props) {
                 </div>
                 {/* /.row */}
                 {/* Table row */}
-                <ProductsSelect />
                 <div className="row">
                     <div className="col-12 table-responsive">
 
-                       <ProductsInvoive />
+                       <ProductsInvoice />
 
                     </div>
                     {/* /.col */}

@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::middleware(['lang'])->group(function(){
 Route::prefix('cafeto/admin')->group(function() {
     Route::get('/dashboard', 'Admin\DashboardController@index')->name('cafeto.admin.dashboard');
 
@@ -18,4 +18,5 @@ Route::prefix('cafeto/admin')->group(function() {
     Route::get('/sales/search/{doc}', 'Admin\SalesController@search');
    
     Route::get('/inventory', 'Admin\InventoryController@index')->name('cafeto.admin.inventory');
+});
 });

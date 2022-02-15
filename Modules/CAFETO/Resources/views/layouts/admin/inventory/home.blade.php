@@ -9,7 +9,7 @@
 		<div class="col-md-12">
 			<div class="card card-cafeto card-outline shadow">
 				<div class="card-header text-muted border-bottom-0">
-					{{ __('Inventory')}}
+					{{ trans('cafeto::menu.Inventory') }}
 				</div>
 				<!-- /.card-header -->
 				<div class="card-body pt-0">

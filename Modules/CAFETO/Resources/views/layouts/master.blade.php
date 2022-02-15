@@ -26,7 +26,7 @@
                   <div class="row">
                     <div class="col-md-12" id="breadvar" style="background: #734226;" >
                       <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">{{ __('Home') }}</a></li>
+                        <li class="breadcrumb-item"><a href="#"> {{ trans('cafeto::menu.Home') }}</a></li>
                         @section('breadcrumb')
                         @show 
                       </ol>

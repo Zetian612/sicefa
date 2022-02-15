@@ -64,6 +64,7 @@ export default class Index extends Component {
     }
   }
 
+
   /* 
     declaro las constantes que necesitare para los datos y componentes.
   */

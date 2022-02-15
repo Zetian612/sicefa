@@ -14,7 +14,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('cafeto::layouts.admin.dashboard');
+        $data = ['title'=>trans('cafeto::menu.Home')];
+        return view('cafeto::layouts.admin.dashboard',$data);
     }
 
     /**

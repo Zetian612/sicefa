@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/dmendezp/sicefa/blob/fabrica/public/general/images/Group1.png" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -16,7 +16,7 @@ SICEFA Nació como proyecto formativo del programa Tecnológico en Análisis y D
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+<!-- Mira **Deployment** para conocer como desplegar el proyecto. -->
 
 
 ### Pre-requisitos 📋
@@ -81,7 +81,7 @@ _Herramientas utilizadas para crear el proyecto_
 
 * [Laravel](https://laravel.com) - El framework web usado
 * [ReactJS](https://es.reactjs.org/docs/getting-started.html) - Libreria de javascript
-* [Laragon](https://laragon.org/download/index.html) - Usado para generar RSS  
+* [Laragon](https://laragon.org/download/index.html) - Usado para el servidor local  
 * [Composer](https://getcomposer.org) - Manejador de dependencias
 <!-- ## Contribuyendo 🖇️
 

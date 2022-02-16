@@ -2,16 +2,16 @@ import React ,{ useState, useEffect }from "react";
 import moment from "moment";
 
 import ProductsInvoice from "./ProductsInvoice";
-// import ProductsModal from "./ProductsModal";
-
+import ProductsModal from "./ProductsModal";
+import PuntoVenta from "./PuntoVenta";
 
 const dbProductos = {
     "123": {
-      nombre: "Coca Cola",
+      nombre: "Cafe Americano",
       precio: 12.5
     },
     "456": {
-      nombre: "Galletas Marías",
+      nombre: "Cafe Campesino",
       precio: 8.5
     }
   };
@@ -91,13 +91,14 @@ export default function ShowInvoice(props) {
                      onText={codigo => {
                         const producto = dbProductos[codigo];
           
-                        setCurrentListaProductos([
-                          ...(currentListaProductos || []),
-                          producto
-                        ]);
+                        if (!producto) {
+                          alert("El producto no existe :(");
+                          return;
+                        }
+          
+                        setCurrentListaProductos([...(currentListaProductos || []), producto ]);
                       }}
 
-                      currentProductos={currentListaProductos}
                     />
                     <div className="col-12 table-responsive">
                         <ProductsInvoice

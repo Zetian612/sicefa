@@ -12,7 +12,7 @@ class PeopleController extends Controller
     public function personal_data()
     {
         $data = ['title'=>trans('sica::menu.Personal data')];
-        return view('sica::admin.people.personal_data',$data);
+        return view('sica::admin.people.personal_data.personal_data',$data);
     }
 
     public function search_apprentices(){

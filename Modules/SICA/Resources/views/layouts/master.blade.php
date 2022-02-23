@@ -13,6 +13,21 @@
     <!-- Content Header (Page header) -->
     @include('sica::layouts.partials.breadcrumb')
     <!-- /.content-header -->
+    @if(Session::has('message'))
+    <div class="container-fluid">
+      <div class="mtop16 alert alert-{{ Session::get('typealert') }}" style="display: block; margin-bottom: 16px;">
+      {{ Session::get('message') }}
+      @if ($errors->any())
+      <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+      @endif
+     
+      </div>
+    </div>
+    @endif
     <!-- Main content -->
     @section('content')
     @show
@@ -27,6 +42,15 @@
 @include('sica::layouts.partials.scripts')
 
 @section('script')
+<script>
+  $('.alert').slideDown();
+  setTimeout(function(){$('.alert').slideUp();}, 10000);
+</script>
+<script type="text/javascript">
+	$(function () {
+  		$('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
 @show
 
 </body>

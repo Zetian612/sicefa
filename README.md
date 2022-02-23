@@ -25,16 +25,16 @@ Para poder ejecutar el proyecto en nuestro equipo vamos a necesitar las siguient
 
 - Laragon 
 - Composer
-- MysQL
+- MySQL
 - Editor de codigo
 - Git
 
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutándose_
 
-_Empezaremos por clonar la rama del repositorio que se nos ha asignado. Abre Git Bash y dijita el siguiente comando._
+_Empezaremos por clonar la rama del repositorio que se nos ha asignado. Abre Git Bash y digita el siguiente comando._
 
 ```
  git clone -b <Rama> <LinkRepo>
@@ -49,12 +49,16 @@ _Dependencias de npm_
 
 ```
  npm install
+
+ &&
+
+ npm run dev
 ```
 
 
 ## Ejecutando las pruebas ⚙️
 
-Una vez actualizadas todas las dependencias vamos a copiar el archivo **.env.example** , lo pegamos en la raiz del proyecto y cambiamos su nombre a **.env**
+Una vez actualizadas todas las dependencias vamos a copiar el archivo **.env.example**, lo pegamos en la raíz del proyecto y cambiamos su nombre a **.env**
 
 En ese mismo archivo vamos a configurar las variables para que coincidan con nuestra base de datos local.
 
@@ -72,7 +76,7 @@ _Para agregar las tablas a la base de datos vamos a correr nuestras migraciones_
 ```
 php artisan module:migrate <Modulo>
 
-php artisan module:seed <Modulo> // Para correr los seeders que contienen los permisos de el modulo especificado.
+php artisan module:seed <Modulo> // Para correr los seeders que contienen los permisos del módulo especificado.
 ```
 
 ## Construido con 🛠️
@@ -83,6 +87,8 @@ _Herramientas utilizadas para crear el proyecto_
 * [ReactJS](https://es.reactjs.org/docs/getting-started.html) - Libreria de javascript
 * [Laragon](https://laragon.org/download/index.html) - Usado para el servidor local  
 * [Composer](https://getcomposer.org) - Manejador de dependencias
+* [AdminLTE](https://adminlte.io/) - Plantilla usada para los proyectos.
+
 <!-- ## Contribuyendo 🖇️
 
 Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests. -->
@@ -97,16 +103,15 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
  -->
 ## Autores ✒️
 
-_Cada grupo de ADSI se ha visto involucrado en el desarrollo del aplicativo desde sus inicios_
+_Cada grupo de ADSI se ha visto involucrado en el desarrollo del aplicativo desde sus inicios, en esta sección haremos mención de los implicados más recientes_
 
-* **Diego Mendez** - *Trabajo Inicial y lider del proyeccto* - [damendez](#)
-
-
-<!-- También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto.  -->
+* **Diego Mendez** - *Trabajo Inicial y líder del proyecto* - [damendez](https://github.com/dmendezp)
+* **Juan Sebastian Perdomo** - *Pasante* - [Zetian612](https://github.com/Zetian612)
+* **Gabriel Andres Gonzales** - *Pasante* - [damendez](https://github.com/gabo024)
 
 <!-- ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles -->
+Este proyecto está bajo la Licencia (Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles -->
 
 <!-- ## Expresiones de Gratitud 🎁
 

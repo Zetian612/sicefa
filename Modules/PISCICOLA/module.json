@@ -1,0 +1,13 @@
+{
+    "name": "PISCICOLA",
+    "alias": "piscicola",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\PISCICOLA\\Providers\\PISCICOLAServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

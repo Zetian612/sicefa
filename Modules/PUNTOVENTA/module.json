@@ -1,0 +1,13 @@
+{
+    "name": "PUNTOVENTA",
+    "alias": "puntoventa",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\PUNTOVENTA\\Providers\\PUNTOVENTAServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

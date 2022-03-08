@@ -15,4 +15,5 @@ require('./bootstrap');
 
 
 require('./modules/cafeto/Index');
+require('./modules/puntoventa/Index');
 require('./modules/bolmeteor/Example');

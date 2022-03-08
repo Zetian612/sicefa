@@ -1,0 +1,42 @@
+import React from 'react'
+import SearchForm from '../templates/search/SearchForm'
+import SearchDetails from '../templates/search/SearchDetails'
+import Modal from '../templates/Modal'
+// import Button from '../templates/Button'
+
+export default function Search(props) {
+
+    const { handleSubmit, value, handleChange, isLoading, errorMsg, data } = props;
+
+    return (
+
+        <div className="col-md-5">
+            <SearchForm
+                handleSubmit={handleSubmit}
+                value={value}
+                handleChange={handleChange}
+                isLoading={isLoading}
+                errorMsg={errorMsg}
+            />
+
+            { data === "" ?
+
+            <>
+                <SearchDetails
+                    data={data} />
+
+                    <Modal
+                        modalTitle={"Registrar"}
+                        modalId={"modal-register"}
+                        button={false}
+                        content={"contenido"
+
+
+                         } />
+            </>
+
+                : ""} 
+        </div>
+
+    )
+}

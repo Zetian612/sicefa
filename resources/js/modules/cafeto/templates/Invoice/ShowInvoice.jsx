@@ -1,26 +1,22 @@
-import React ,{ useState, useEffect }from "react";
+import React, { useState, useEffect } from "react";
 import moment from "moment";
 
 import ProductsInvoice from "./ProductsInvoice";
 import ProductsModal from "./ProductsModal";
-import PuntoVenta from "./PuntoVenta";
 
 const dbProductos = {
-    "123": {
-      nombre: "Cafe Americano",
-      precio: 12.5
+    123: {
+        nombre: "Cafe Americano",
+        precio: 12.5,
     },
-    "456": {
-      nombre: "Cafe Campesino",
-      precio: 8.5
-    }
-  };
+    456: {
+        nombre: "Cafe Campesino",
+        precio: 8.5,
+    },
+};
 export default function ShowInvoice(props) {
-    
-    
-
     // Estados internos
-  const [currentListaProductos, setCurrentListaProductos] = useState(null);
+    const [currentListaProductos, setCurrentListaProductos] = useState(null);
 
     return (
         <>
@@ -88,59 +84,30 @@ export default function ShowInvoice(props) {
                 {/* Table row */}
                 <div className="row">
                     <ProductsModal
-                     onText={codigo => {
-                        const producto = dbProductos[codigo];
-          
-                        if (!producto) {
-                          alert("El producto no existe :(");
-                          return;
-                        }
-          
-                        setCurrentListaProductos([...(currentListaProductos || []), producto ]);
-                      }}
+                        onText={(codigo) => {
+                            const producto = dbProductos[codigo];
 
+                            if (!producto) {
+                                alert("El producto no existe :(");
+                                return;
+                            }
+
+                            setCurrentListaProductos([
+                                ...(currentListaProductos || []),
+                                producto,
+                            ]);
+                        }}
                     />
-                    <div className="col-12 table-responsive">
-                        <ProductsInvoice
-                            productos={currentListaProductos}
-                            setProductos={setCurrentListaProductos}
-                        />
-                        {/* <PuntoVenta /> */}
-                    </div>
+
+                    <ProductsInvoice
+                        productos={currentListaProductos}
+                        setProductos={setCurrentListaProductos}
+                    />
+
                     {/* /.col */}
                 </div>
                 {/* /.row */}
-                <div className="row">
-                    {/* accepted payments column */}
-                    <div className="col-6">
-                        {/*                           
-                            <p
-                                className="text-muted well well-sm shadow-none"
-                                style={{ marginTop: 10 }}
-                            >
-                                Etsy doostang zoodles disqus groupon greplin
-                                oooj voxy zoodles, weebly ning heekya handango
-                                imeem plugg dopplr jibjab, movity jajah plickers
-                                sifteo edmodo ifttt zimbra.
-                            </p> */}
-                    </div>
-                    {/* /.col */}
-                    <div className="col-6">
-                        <p className="lead">Amount Due 2/22/2014</p>
-                        <div className="table-responsive">
-                            <table className="table">
-                                <tbody>
-                                    <tr>
-                                        <th>Total:</th>
-                                        <td>$265.24</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    {/* /.col */}
-                </div>
-                {/* /.row */}
+
                 {/* this row will not appear when printing */}
                 <div className="row no-print">
                     <div className="col-12">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Modal from "../Modal";
-import Button from "../Button";
+import Modal from "../../Modal";
+import Button from "../../Button";
 
 export default function ProductsModal(props) {
 

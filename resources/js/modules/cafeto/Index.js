@@ -1,8 +1,8 @@
 import React, { Component, Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
-import SalesDetails from './Search/SearchDetails';
-import SearchForm from './Search/SearchForm';
-const Invoice = lazy(() => import('./Invoice/ShowInvoice'));
+import SalesDetails from './templates/Search/SearchDetails';
+import SearchForm from './templates/Search/SearchForm';
+const Invoice = lazy(() => import('./templates/Invoice/ShowInvoice'));
 import Load from './Load';
 import axios from 'axios';
 

@@ -184,28 +184,28 @@
        }
        
         var table = $('.yajra-datatable').DataTable({
-            "processing": true,
-            "serverSide": true,
-            "ajax": "{{ route('bolmeteor.estacion.climaticdata') }}",
-            "columns": [
-                {"data": 'DT_RowIndex', "name": 'DT_RowIndex'},
-                {"data": 'date_time', "name": 'date_time'},
-                {"data": 'temperature', "name": 'temperature'},
-                {"data": 'precipitation', "name": 'precipitation'},
-                {"data": 'relative_humidity', "name": 'relative_humidity'},
-                {"data": 'solar_radiation', "name": 'solar_radiation'},
-                {"data": 'winds_direction', "name": 'winds_direction'},
-                {"data": 'winds_peed', "name": 'winds_peed'},
+            processing: true,
+            serverSide: true,
+            ajax: "{{ route('bolmeteor.estacion.climaticdata') }}",
+            columns: [
+                {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                {data: 'date_time', name: 'date_time'},
+                {data: 'temperature', name: 'temperature'},
+                {data: 'precipitation', name: 'precipitation'},
+                {data: 'relative_humidity', name: 'relative_humidity'},
+                {data: 'solar_radiation', name: 'solar_radiation'},
+                {data: 'winds_direction', name: 'winds_direction'},
+                {data: 'winds_peed', name: 'winds_peed'},
                 {
-                    "data": 'action', 
-                    "name": 'action', 
-                    "orderable": true, 
-                    "searchable": true,
-                    "fixedHeader": true 
+                    data: 'action', 
+                    name: 'action', 
+                    orderable: true, 
+                    searchable: true,
+                    fixedHeader: true 
                 }
             ],
-            "dom": 'Bfrtip',
-           "buttons": [
+            dom: 'Bfrtip',
+           buttons: [
                'pdf'
            ]
         });

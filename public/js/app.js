@@ -6842,7 +6842,6 @@ function Alerts(props) {
 
   if (show) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap_Alert__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      ariant: "success",
       variant: 'danger',
       children: props.AlertMS
     });

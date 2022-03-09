@@ -1,4 +1,3 @@
-
 @extends('bolmeteor::layouts.admin')
 
 @section('title','dashboard')
@@ -10,225 +9,214 @@
 @endsection
 
 @section('content')
-    <!-- Main content -->
-   
-    <div class="content">
-    
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 d-flex">
-              <div class="card card-green card-outline shadow">
-                <div class="card-header text-muted border-bottom-0">
-                
-                </div>
-                <div class="card-body pt-0">
-                  <div class="row">
-                    <div class="col-12">
-                      <h1 class="text-bold lead text-center">Estación metereológica</h1>
-                      <p class="text-muted text-md-justify">
-                        Desde el mes de marzo del 2017 el Centro de Formación Agroindustrial “La Angostura”
-                        de la Regional Huila, pone a disposición de la comunidad educativa del SENA y del
-                        sector productivo de la región, la información de la estación meteorológica ubicada
-                        dentro de las instalaciones del Centro de Formación.
-                      </p>
-                        <p class="text-muted text-md-justify">
-                        La información se registra en una estación meteorológica automática marca WatchDog
-                        2900ET de los siguientes elementos del clima: Precipitación, Temperatura, Humedad
-                        relativa, velocidad y dirección del viento, Radiación solar (W/m2
-                        ). La periodicidad de la
-                        toma de información es de 10 minutos. La información que se presentará es el
-                        acumulado de precipitación, humedad relativa, velocidad del viento y de radiación solar.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-          
-              </div>
-            </div>
-            <div class="col-md-6 d-flex">
-            <div class="card card-green card-outline shadow">
-              <!-- /.card-header -->
-              <div class="card-body">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100" src="{{ asset('bolmeteor/images/B1.jpg') }}" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="{{ asset('bolmeteor/images/B2.jpg') }}" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="{{ asset('bolmeteor/images/B3.jpg') }}" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="{{ asset('bolmeteor/images/B1.jpg') }}" alt="Third slide">
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
+<!-- Main content -->
+
+<div class="content">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 d-flex">
+        <div class="card card-green card-outline shadow">
+          <div class="card-header text-muted border-bottom-0">
+
+          </div>
+          <div class="card-body pt-0">
+            <div class="row">
+              <div class="col-12">
+                <h1 class="text-bold lead text-center">Estación metereológica</h1>
+                <p class="text-muted text-md-justify">
+                  Desde el mes de marzo del 2017 el Centro de Formación Agroindustrial “La Angostura”
+                  de la Regional Huila, pone a disposición de la comunidad educativa del SENA y del
+                  sector productivo de la región, la información de la estación meteorológica ubicada
+                  dentro de las instalaciones del Centro de Formación.
+                </p>
+                <p class="text-muted text-md-justify">
+                  La información se registra en una estación meteorológica automática marca WatchDog
+                  2900ET de los siguientes elementos del clima: Precipitación, Temperatura, Humedad
+                  relativa, velocidad y dirección del viento, Radiación solar (W/m2
+                  ). La periodicidad de la
+                  toma de información es de 10 minutos. La información que se presentará es el
+                  acumulado de precipitación, humedad relativa, velocidad del viento y de radiación solar.
+                </p>
               </div>
             </div>
           </div>
+
         </div>
-
-       
-
-
-        <!--crud principal archivos-->
-
-        <div class="col-md-12">
-          <div class="card card-green card-outline shadow">
-            <div class="card-header">
-                <h3 class="card-title">
-                  Datos Climáticos
-                </h3>
+      </div>
+      <div class="col-md-6 d-flex">
+        <div class="card card-green card-outline shadow">
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="{{ asset('bolmeteor/images/B1.jpg') }}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="{{ asset('bolmeteor/images/B2.jpg') }}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="{{ asset('bolmeteor/images/B3.jpg') }}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="{{ asset('bolmeteor/images/B1.jpg') }}" alt="Third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
-            <!-- /.card-header -->
-            <div class="card-header card-green text-muted border-bottom-0">
-            </div>
-            <div class="card-body col-md-12">
-                <table class="table table-bordered yajra-datatable">
-                  <thead class=" thead">
-                      <tr class="bg-success" >
-                        <th scope="col">#</th>
-                        <th scope="col">date</th>
-                        <th scope="col">temperature</th>
-                        <th scope="col">precipitation</th>
-                        <th scope="col">relative humidity</th>
-                        <th scope="col">solar radiation</th>
-                        <th scope="col">winds direction</th>
-                        <th scope="col">winds peed</th>
-                        <!--<th scope="col">editar</th>-->
-                      </tr>
-                  </thead>
-                  <tbody>
-                  </tbody>
-                </table>
-            </div>
           </div>
         </div>
-        </div>
-        </div>
       </div>
-        </div>
-      </div>
+    </div>
 
 
-<!--Modal principal para tabla de archivos-->
-<div>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header bg-dark">
-        <h5 class="modal-title" id="exampleModalLabel">Datos climaticos</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="exampleFormControlFile1">Fecha</label>
-            <input type="date" class="form-control" id="">
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlFile1">Archivo</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlFile1">Responsable</label>
-            <input type="text" class="form-control" id="">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-success">Guardar</button>
+
+
+    <!--crud principal archivos-->
+
+    <div class="col-md-12">
+      <div class="card card-green card-outline shadow">
+        <div class="card-header">
+          <h3 class="card-title">
+            Datos Climáticos
+          </h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-header card-green text-muted border-bottom-0">
+        </div>
+        <div class="card-body col-md-12">
+          <table class="table table-bordered yajra-datatable">
+            <thead class=" thead">
+              <tr class="bg-success">
+                <th scope="col">#</th>
+                <th scope="col">date</th>
+                <th scope="col">temperature</th>
+                <th scope="col">precipitation</th>
+                <th scope="col">relative humidity</th>
+                <th scope="col">solar radiation</th>
+                <th scope="col">winds direction</th>
+                <th scope="col">winds peed</th>
+                <!--<th scope="col">editar</th>-->
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<br>
-    </div>
 
-    
-
-       
-
-      </div><!-- /.container-fluid -->
-    <!-- /.content -->
-  </div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-   <div class="modal-dialog" role="document">
+<!--Modal principal para tabla de archivos-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title" id="exampleModalLabel">Datos climaticos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <form>
-         <div class="modal-body">
-              <input type="hidden" name="id" id="id"/>
-              <input type="hidden" name="_token" id="csrf" value="{{Session::token()}}">
-               <div class="form-row">
-                  <div class="form-group col-md-6">
-                     <label for="date_time">Date time</label>
-                     <input type="datetime-local" class="form-control" id="date_time" name="date_time" required>
-                  </div>
-                  <div class="form-group col-md-6">
-                     <label for="temperature">Temperature</label>
-                     <input type="decimal" class="form-control" id="temperature" name="temperature" required>
-                  </div>
-               </div>
-               <div class="form-row">
-                  <div class="form-group col-md-6">
-                     <label for="temperature">Precipitation</label>
-                     <input type="decimal" class="form-control" id="precipitation" name="precipitation" required>
-                  </div>
-                  <div class="form-group col-md-6">
-                     <label for="temperature">Relative Humidity</label>
-                     <input type="decimal" class="form-control" id="relative_humidity" name="relative_humidity" required>
-                  </div>
-               </div>
-               <div class="form-row">
-                  <div class="form-group col-md-6">
-                     <label for="temperature">Solar Radiation</label>
-                     <input type="decimal" class="form-control" id="solar_radiation" name="solar_radiation" required>
-                  </div>
-                  <div class="form-group col-md-6">
-                     <label for="temperature">Winds Direction</label>
-                     <input type="decimal" class="form-control" id="winds_direction" name="winds_direction" required>
-                  </div>
-               </div>
-               <div class="form-row">
-                  <div class="form-group col-md-6">
-                     <label for="temperature">Wind Speed</label>
-                     <input type="decimal" class="form-control" id="winds_peed" name="winds_peed" required>
-                  </div>
-               </div>
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btn-primary btn-guardar">Guardar</button>
-         </div>
-         </form>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Fecha</label>
+              <input type="date" class="form-control" id="">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Archivo</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Responsable</label>
+              <input type="text" class="form-control" id="">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-success">Guardar</button>
+        </div>
       </div>
-   </div>
+    </div>
+  </div>
+  <br>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <input type="hidden" name="id" id="id" />
+          <input type="hidden" name="_token" id="csrf" value="{{Session::token()}}">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="date_time">Date time</label>
+              <input type="datetime-local" class="form-control" id="date_time" name="date_time" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="temperature">Temperature</label>
+              <input type="decimal" class="form-control" id="temperature" name="temperature" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="temperature">Precipitation</label>
+              <input type="decimal" class="form-control" id="precipitation" name="precipitation" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="temperature">Relative Humidity</label>
+              <input type="decimal" class="form-control" id="relative_humidity" name="relative_humidity" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="temperature">Solar Radiation</label>
+              <input type="decimal" class="form-control" id="solar_radiation" name="solar_radiation" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="temperature">Winds Direction</label>
+              <input type="decimal" class="form-control" id="winds_direction" name="winds_direction" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="temperature">Wind Speed</label>
+              <input type="decimal" class="form-control" id="winds_peed" name="winds_peed" required>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary btn-guardar">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -244,8 +232,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script type="text/javascript">
-
-   $(function () {
+  $(function () {
 
      function llenarModal(data){
        $('#id').val(data.DT_RowIndex);

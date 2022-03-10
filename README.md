@@ -107,7 +107,7 @@ _Cada grupo de ADSI se ha visto involucrado en el desarrollo del aplicativo desd
 
 * **Diego Mendez** - *Trabajo Inicial y líder del proyecto* - [damendez](https://github.com/dmendezp)
 * **Juan Sebastian Perdomo** - *Pasante* - [Zetian612](https://github.com/Zetian612)
-* **Gabriel Andres Gonzales** - *Pasante* - [damendez](https://github.com/gabo024)
+* **Gabriel Andres Gonzales** - *Pasante* - [gabo024](https://github.com/gabo024)
 
 <!-- ## Licencia 📄
 

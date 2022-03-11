@@ -6834,17 +6834,29 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function Alerts(props) {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
       _useState2 = _slicedToArray(_useState, 2),
       show = _useState2[0],
-      setShow = _useState2[1];
+      setShow = _useState2[1]; // onClose = () => {
+  //     $('.alert').slideDown();
+  //           setTimeout(function(){
+  //           $('.alert').slideUp();
+  //         }, 10000);
+  // };
+
 
   if (show) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap_Alert__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      ariant: "success",
-      variant: 'danger',
-      children: props.AlertMS
+      variant: "danger",
+      onClose: function onClose() {
+        return setShow(false);
+      },
+      dismissible: true,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+        children: [" ", props.AlertMS]
+      })
     });
   }
 }
@@ -6979,7 +6991,7 @@ var Index = /*#__PURE__*/function (_Component) {
                 _context.prev = 9;
                 _context.t0 = _context["catch"](1);
                 this.setState({
-                  errorMsg: 'Error while loading data. Try again later.'
+                  errorMsg: 'Error al cargar. Intenta de nuevo.'
                 });
 
               case 12:
@@ -7010,10 +7022,8 @@ var Index = /*#__PURE__*/function (_Component) {
           client = _this$state.client,
           isLoading = _this$state.isLoading,
           errorMsg = _this$state.errorMsg;
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Alerts__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          AlertMS: errorMsg
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: "container-fluid",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "row",
@@ -7028,7 +7038,7 @@ var Index = /*#__PURE__*/function (_Component) {
               data: client
             })]
           })
-        })]
+        })
       });
     }
   }]);

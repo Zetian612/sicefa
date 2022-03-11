@@ -50,7 +50,7 @@ export class Index extends Component {
 
         } catch (error) {
             this.setState({
-                errorMsg: 'Error while loading data. Try again later.'
+                errorMsg: 'Error al cargar. Intenta de nuevo.'
             });
         } finally {
             this.setState({ isLoading: false});
@@ -60,7 +60,8 @@ export class Index extends Component {
     render() {
         const { client, isLoading, errorMsg} = this.state;
         return (<>
-        <Alerts AlertMS={errorMsg} />
+
+        {/* { errorMsg === '' ? '': <Alerts AlertMS={errorMsg} />} */}
             <div className="container-fluid">
                 <div className="row">
                     <Search

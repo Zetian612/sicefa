@@ -8,12 +8,12 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
-        <li><a class="nav-link scrollto" href="#ptoventa">Punto de venta</a></li>
-        <li><a class="nav-link scrollto" href="#modules">Aplicaciones</a></li>
-        <li><a class="nav-link scrollto" href="#cefa">Map</a></li>
+        <li><a class="nav-link scrollto active" href="#hero">{{ trans('menu.Home') }}</a></li>
+        <li><a class="nav-link scrollto" href="#ptoventa">{{ trans('menu.Point of sale') }}</a></li>
+        <li><a class="nav-link scrollto" href="#modules">{{ trans('menu.Aplications') }}</a></li>
+        <li><a class="nav-link scrollto" href="#cefa">{{ trans('menu.Map') }}</a></li>
         <li><a class="nav-link scrollto" href="#why-us">SENA-Empresa</a></li>
-        <li><a class="nav-link scrollto" href="#about">Acerca</a></li>
+        <li><a class="nav-link scrollto" href="#about">{{ trans('menu.About us') }}</a></li>
         <li><a class="nav-link scrollto" href="#contact">PQRS</a></li>
         <li class="dropdown">
           @auth

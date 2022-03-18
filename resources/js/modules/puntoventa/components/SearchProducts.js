@@ -1,11 +1,9 @@
-import React, {useState} from 'react'
-import Modal from '../templates/Modal'
-import Button from '../templates/Button'
-import axios from 'axios';
+import React, { useState } from 'react'
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
 
-export default function AddProducts(props) {
-
-  
+export default function SearchProducts(props) {
+  const [SearchProductsShow, setSearchProductsShow] = useState(false);
 
   const { onText } = props;
 
@@ -14,22 +12,19 @@ export default function AddProducts(props) {
   return (
     <>
 
-      <Button
-        className={"btn btn-secondary"}
-        type={"button"}
-        datatarget={"#modal-product"}
-        datatoggle={"modal"}
-        title={"+"}
-      />
+      <Button variant="secondary" onClick={() => setSearchProductsShow(true)}>
+        +
+      </Button>
 
-      <Modal
-        modalTitle={"Buscar Producto"}
-        modalId={"modal-product"}
-        button={false}
-        content={
-
-
-
+      <Modal show={SearchProductsShow} onHide={() => setSearchProductsShow(false)}>
+        <Modal.Header>
+          <Modal.Title>Agregar productos</Modal.Title>
+          <Button variant="close" type="button" data-dismiss="modal" aria-label="Close" onClick={() => setSearchProductsShow(false)}>
+          <span aria-hidden="true">×</span>
+          </Button>
+         
+        </Modal.Header>
+        <Modal.Body>
           <div className="input-group">
             <input
               value={currentText || ""}
@@ -59,8 +54,13 @@ export default function AddProducts(props) {
               </button>
             </div>
           </div>
-        }
-      />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setSearchProductsShow(false)}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   )
 }

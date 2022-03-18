@@ -22,25 +22,7 @@ export default function SalesDetails(props) {
                                         <br></br>
                                         <div className="row justify-content-center">
                                             <div className="col-md-">
-                                                <button
-                                                    className="btn btn-secondary"
-                                                    type="button"
-                                                    data-toggle="modal"
-                                                    data-target="#modal-register"
-                                                >
-                                                    Registrar
-                                                </button>
-
-                                                {/* // <button
-                                                    //     className="btn btn-primary"
-                                                    //     type="submit"
-                                                    //     defaultValue="Confirmar"
-                                                    //     onClick={
-                                                    //         props.showInvoiceButton
-                                                    //     }
-                                                    // >
-                                                    //     Confirmar
-                                                    // </button> */}
+                                               {props.AddClientButton}
                                             </div>
                                         </div>
                                     </div>

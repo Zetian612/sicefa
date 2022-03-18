@@ -42,7 +42,7 @@ export class Index extends Component {
             this.setState({ isLoading: true });
 
             const response = await axios.get(
-                `http://127.0.0.1:8000/cafeto/admin/sales/search/${this.state.value}`
+                `http://sicefa.test:8081/cafeto/admin/sales/search/${this.state.value}`
             );
 
             this.setState({ client: response.data, errorMsg: '' });

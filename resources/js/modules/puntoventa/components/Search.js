@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SearchForm from '../templates/search/SearchForm'
 import SearchDetails from '../templates/search/SearchDetails'
-import Modal from '../templates/Modal'
-// import Button from '../templates/Button'
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
 
 export default function Search(props) {
-
+    const [AddClientShow, setAddClientShow] = useState(false);
     const { handleSubmit, value, handleChange, isLoading, errorMsg, data } = props;
 
     return (
@@ -19,23 +19,36 @@ export default function Search(props) {
                 errorMsg={errorMsg}
             />
 
-            { data === "" ?
+            {data === "" ?
 
-            <>
+
                 <SearchDetails
-                    data={data} />
+                    AddClientButton={
+                        <>
+                            <Button variant="secondary" onClick={() => setAddClientShow(true)}>
+                               Registrar
+                            </Button>
 
-                    <Modal
-                        modalTitle={"Registrar"}
-                        modalId={"modal-register"}
-                        button={false}
-                        content={"contenido"
+                            <Modal show={AddClientShow} onHide={() => setAddClientShow(false)}>
+                                <Modal.Header>
+                                    <Modal.Title>Agregar Cliente</Modal.Title>
+                                    <Button variant="close" type="button" data-dismiss="modal" aria-label="Close" onClick={() => setAddClientShow(false)}>
+                                        <span aria-hidden="true">×</span>
+                                    </Button>
 
+                                </Modal.Header>
+                                <Modal.Body>
 
-                         } />
-            </>
-
-                : ""} 
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={() => setAddClientShow(false)}>
+                                        Close
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
+                        </>
+                    } />
+                : ""}
         </div>
 
     )

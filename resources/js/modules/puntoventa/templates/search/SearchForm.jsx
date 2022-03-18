@@ -1,10 +1,6 @@
 import React from "react";
-// import I18n from '../../../vendor/I18n';
-
 
 export default function SearchForm(props) {
-    // window.I18n = I18n;
-    // let translator = new I18n;
     return (
         <>
             
@@ -34,10 +30,6 @@ export default function SearchForm(props) {
                                                 required
                                                 name="search"
                                             />
-                                            {/* <span 
-                                    style={{color: "red"}}>
-                                        {this.state.error["search"]}
-                                    </span> */}
                                             <br />
                                             <div className="row justify-content-center">
                                                 <div className="col-md-3">
@@ -71,9 +63,6 @@ export default function SearchForm(props) {
                                 </div>
                             </div>
                         </div>
-                    {/* </div>
-                </div>
-            </div> */}
         </>
     );
 }

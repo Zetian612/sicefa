@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ShowInvoice from '../templates/invoice/ShowInvoice';
 import Products from './Products';
-import AddProducts from './AddProducts';
+import SearchProducts from './SearchProducts';
 
 const dbProductos = {
   "123": {
     nombre: "Cafe Americano",
-    precio: 2000
+    precio: 2000,
+    cantidad: 5
   },
   "456": {
     nombre: "Cafe Campesino",
-    precio: 2000
+    precio: 2000,
+    cantidad: 5
   }
 };
 
@@ -20,12 +22,13 @@ export default function Invoice(props) {
   const { data } = props;
   return (
     <div className="col-md-7">
+
       <ShowInvoice
         title={'Punto de venta'}
         icon={"fas fa-shopping-cart"}
         route={"/puntoventa/admin/sales/invoice"}
-        AddProducts={
-          !data || data.length === 0 ?  "" : <AddProducts
+        SearchProducts={
+          !data || data.length === 0 ?  "" : <SearchProducts
             onText={codigo => {
               const producto = dbProductos[codigo];
 
@@ -36,7 +39,9 @@ export default function Invoice(props) {
 
               setCurrentListaProductos([...(currentListaProductos || []), producto]);
             }} /> 
+         
         }
+        lisproduct={currentListaProductos}
         products={
           <Products
             productos={currentListaProductos}

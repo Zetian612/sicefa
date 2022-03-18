@@ -1,21 +1,33 @@
-import React from "react";
-import moment from "moment";
-// import ProductsInvoice from "./ProductsInvoice";
-// import Imprimir from "../../components/Imprimir";
-// import Products from '../../components/Products';
-export default function ShowInvoice(props) {
-    const {icon, title, data, SearchProducts, products} = props;
+import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+
+export default function Imprimir(props) {
+    const {icon, title, data, products} = props;
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <>
-            <div className="invoice p-3 mb-3">
+            <Button variant="primary" onClick={handleShow}>
+                Launch demo modal
+            </Button>
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <div className="invoice p-3 mb-3">
                 {/* title row */}
                 <div className="row">
                     <div className="col-12">
                         <h4>
                             <i className={icon} /> {title}
                             <small className="float-right">
-                                Date: {moment().format("L")}
+                                {/* Date: {moment().format("L")} */}
                             </small>
                         </h4>
                     </div>
@@ -66,32 +78,29 @@ export default function ShowInvoice(props) {
                 {/* /.row */}
                 {/* Table row */}
                 <div className="row">
-                   {SearchProducts}
                    <br />
-
+                   
                     {products}
                 </div>
                 {/* /.row */}
+
                 {/* this row will not appear when printing */}
                 <div className="row no-print">
                     <div className="col-12">
-                    <form method="post" action="/register">
-                            <input type="hidden" name="people_id" value={data.id}/>
-                            <input type="hidden" name="product_id" />
-                            <input type="hidden" name="amount"/>
-                            <button type="submit" className="btn btn-default">
-                            <i className="fas fa-print" /> Print
-                            </button>
-                       
-                    </form>
-
                     </div>
                 </div>
             </div>
-            {/* /.invoice */}
-            {/* /.col */}
-            {/* /.row */}
-            {/* /.container-fluid */}
+
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </>
-    );
+    )
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Search from './components/Search';
-import Invoice from './components/Invoice';
+import Cart from './components/cart/Cart';
 import Alerts from './Alerts';
 
 export class Index extends Component {
@@ -42,7 +42,7 @@ export class Index extends Component {
             this.setState({ isLoading: true });
 
             const response = await axios.get(
-                `http://127.0.0.1:8000/cafeto/admin/sales/search/${this.state.value}`
+                `http://sicefa.test:8081/cafeto/admin/sales/search/${this.state.value}`
             );
 
             this.setState({ client: response.data, errorMsg: '' });
@@ -60,7 +60,6 @@ export class Index extends Component {
     render() {
         const { client, isLoading, errorMsg} = this.state;
         return (<>
-        <Alerts AlertMS={errorMsg} />
             <div className="container-fluid">
                 <div className="row">
                     <Search
@@ -72,7 +71,7 @@ export class Index extends Component {
                         data={client}
                     />
 
-                    <Invoice
+                    <Cart
                         data={client} />
                 </div>
             </div>

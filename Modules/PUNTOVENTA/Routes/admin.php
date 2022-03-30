@@ -16,5 +16,6 @@ Route::prefix('puntoventa/admin')->group(function() {
 
     Route::get('/sales', 'Admin\SalesController@index')->name('puntoventa.admin.sales');
     Route::get('/sales/invoice', 'Admin\SalesController@store')->name('puntoventa.admin.sales.invoice');
+    Route::get('/sales/invoice/products', 'Admin\ProductsController@show')->name('puntoventa.admin.sales.invoice.products');
 }); 
 });

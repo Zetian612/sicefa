@@ -12,6 +12,9 @@ class PISCICOLAController extends Controller
      * Display a listing of the resource.
      * @return Renderable
      */
+
+
+     
     public function index()
     {
         return view('piscicola::index');
@@ -21,9 +24,14 @@ class PISCICOLAController extends Controller
      * Show the form for creating a new resource.
      * @return Renderable
      */
-    public function create()
+    public function production()
     {
-        return view('piscicola::create');
+        return view('piscicola::production');
+    }
+
+    public function home()
+    {
+        return view('cefa.welcome');
     }
 
     /**

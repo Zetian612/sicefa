@@ -11,6 +11,9 @@
 |
 */
 
-Route::prefix('piscicola')->group(function() {
-    Route::get('/', 'PISCICOLAController@index');
+Route::prefix('piscicola')->group(function() {    /* url*/
+    Route::get('/index', 'PISCICOLAController@index')->name('cefa.piscicola.index');
+    Route::get('/production', 'PISCICOLAController@production')->name('cefa.piscicola.production');
 });
+    
+

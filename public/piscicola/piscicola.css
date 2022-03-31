@@ -1,0 +1,91 @@
+/* aside */
+aside{
+  background-color:#0000;
+  margin:0;
+}
+
+#nav{
+  background-color: aliceblue;
+}
+
+#container{
+ background-color:rgb(226, 239, 255);
+}
+
+
+.content-header{
+  width: 100%;
+}
+
+#controladmin{
+ background-color: transparent;
+ box-shadow: 0px 2px 5px 0px;
+}
+
+#background-start{
+  background-color:azure;
+}
+
+
+.info a{
+  font-family: cursive;
+  font-size: 20px;
+  color:darkcyan
+}
+
+i{
+  color:black;
+}
+
+/* index */
+.card{
+  width: 100%;
+  background-color: azure;
+}
+
+.carousel{
+  width: 100%;
+}
+
+.card-1, .card-2{
+  background-color: rgb(226, 239, 255); 
+  width: 60% ;
+  margin: 20px;
+}
+
+.card-1 img{
+  float: left;
+}
+.card-1 .card-body{
+  float: right;
+}
+
+.card-e {
+  width: 40%;
+  background-color: transparent;
+}
+
+.card-e img:hover{
+  box-shadow: 6px 6px 8px ;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(350deg);
+}
+
+
+.card-body h1 {
+  color:blue;
+  background-color: #add8e6;
+}
+
+.card button{
+  width:70px;
+  opacity: 0.1;
+}
+
+#carrusel1 button{
+  color: red;
+}
+
+
+
+

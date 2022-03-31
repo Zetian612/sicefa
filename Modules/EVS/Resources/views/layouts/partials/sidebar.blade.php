@@ -32,8 +32,9 @@
           </form>
         </div>
 
-
       @endguest
+
+
       </div>
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -92,6 +93,7 @@
             </a>
           </li>
       @endif
+      
         @guest
         @else
         @if(Route::is('*.admin.*'))

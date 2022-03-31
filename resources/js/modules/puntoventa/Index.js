@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Search from './components/Search';
 import Cart from './components/cart/Cart';
-import Alerts from './Alerts';
 
 export class Index extends Component {
     constructor(props) {
@@ -10,21 +9,16 @@ export class Index extends Component {
         this.state = {
             value: "",
             client: [],
-            // showDetails: false,
-            //   showForm: true,
             isLoading: false,
-            //   modal: false,
-            //   showInvoice: false,
             errorMsg: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.showInvoiceButton = this.showInvoiceButton.bind(this);
     }
 
     /* 
-      Atrapo el valor del input.
+      Obtengo el valor del input.
     */
     handleChange(event) {
         this.setState({ value: event.target.value });
@@ -61,7 +55,6 @@ export class Index extends Component {
         const { client, isLoading, errorMsg} = this.state;
         return (<>
 
-        {/* { errorMsg === '' ? '': <Alerts AlertMS={errorMsg} />} */}
             <div className="container-fluid">
                 <div className="row">
                     <Search

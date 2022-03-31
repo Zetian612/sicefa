@@ -1,6 +1,6 @@
 import React from 'react';
 import ShoppingCart from './ShoppingCart'
-// import ShoppingList from './ShoppingList'
+
 
 
 class Cart extends React.Component {
@@ -13,10 +13,9 @@ class Cart extends React.Component {
 		this.addCartItem = this.addCartItem.bind(this);
 		this.changeCartItemQuantity = this.changeCartItemQuantity.bind(this);
 		this.removeCartItem = this.removeCartItem.bind(this);
-		this.toggleCheckout = this.toggleCheckout.bind(this);
 	}
 
-
+	//Agrego los productos 
 	addCartItem(item) {
 		let cartItems = this.state.cartItems;
 		const index = cartItems.findIndex(x => x.item.id===item.id);
@@ -31,6 +30,7 @@ class Cart extends React.Component {
 		this.setState({cartItems});
 	}
 
+	//Actualizo la cantidad de productos
 	changeCartItemQuantity(key, quantity) {
 		let cartItems = this.state.cartItems;
 		const index = cartItems.findIndex(x => x.item.id===key);
@@ -42,7 +42,7 @@ class Cart extends React.Component {
 	}
 
 
-
+	//Elimino el producto con la id que recibo
 	removeCartItem(key) {
 		let cartItems = this.state.cartItems;
 		const index = cartItems.findIndex(x => x.item.id===key);
@@ -51,12 +51,6 @@ class Cart extends React.Component {
 			cartItems.splice(index, 1);
 			this.setState({cartItems});
 		}
-	}
-
-	toggleCheckout() {
-		this.setState(prevState => ({
-			checkout: !prevState.checkout
-		}));
 	}
 
 	render() {

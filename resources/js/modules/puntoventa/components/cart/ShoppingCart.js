@@ -9,6 +9,7 @@ class ShoppingCart extends React.Component {
         super(props)
     }
 
+    //Implementando el registro en la base de datos
     handleSubmit() {
         axios.get('http://sicefa.test:8081/puntoventa/admin/sales/invoice', {
           })
@@ -113,7 +114,7 @@ class ShoppingCart extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div style={{ border: '1px solid', padding: '2px', cursor: 'pointer', width: '100px' }} onClick={this.handleClick}>
+                <div style={{ border: '1px solid', padding: '2px', cursor: 'pointer', width: '100px' }}>
                     Carro ({this.props.cartItems.length})
                 </div>
             </>

@@ -6,8 +6,7 @@ export default function SearchProducts(props) {
   const [SearchProductsShow, setSearchProductsShow] = useState(false);
 
   const { addCartItem} = props;
-
-  // const [currentText, setCurrentText] = useState(null);
+  
   const [products, setProducts] = useState([]);
   const [tablaproducts, setTablaProducts] = useState([]);
   const [busqueda, setBusqueda] = useState("");
@@ -24,6 +23,7 @@ export default function SearchProducts(props) {
     filtrar(e.target.value);
   }
 
+  //Traigo los productos para realizar el filtrado
   const peticionGet = async () => {
     await axios.get("http://sicefa.test:8081/puntoventa/admin/sales/invoice/products")
       .then(response => {
@@ -34,9 +34,12 @@ export default function SearchProducts(props) {
       })
   }
 
+  //Declaro la funcion para filtrar de acuerdo al nombre del producto
   const filtrar = (terminoBusqueda) => {
     var resultadosBusqueda = tablaproducts.filter((elemento) => {
-      if (elemento.element.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+      if (elemento.element.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase()
+        //si se desea buscar por otro parametro se implementa aqui
+      )
       ) {
         return elemento;
       }
@@ -44,13 +47,13 @@ export default function SearchProducts(props) {
     setProducts(resultadosBusqueda);
   }
 
+  //Llamo a peticionGet() despues de que se hayan renderizado los componentes
   useEffect(() => {
     peticionGet();
   }, [])
 
  const handleClick = (item) => {
-		
-
+		//Con la id que obtengo de los resultados, agrego el producto
 		addCartItem(item);
 	}
 
@@ -83,12 +86,6 @@ export default function SearchProducts(props) {
             <div className="input-group-append">
               <button
                 className="btn btn-primary"
-                // onClick={() => {
-                //   // Marcamos la salida, llamando a la función que recibe nuestra salida
-                //   if (onText) {
-                //     onText(currentText);
-                //   }
-                // }}
               >
                 <i className="fas fa-barcode" />
               </button>

@@ -85,16 +85,7 @@ class ShoppingList extends React.Component {
                     <div className="row">
                         {/* accepted payments column */}
                         <div className="col-6">
-                            {/*                           
-                            <p
-                                className="text-muted well well-sm shadow-none"
-                                style={{ marginTop: 10 }}
-                            >
-                                Etsy doostang zoodles disqus groupon greplin
-                                oooj voxy zoodles, weebly ning heekya handango
-                                imeem plugg dopplr jibjab, movity jajah plickers
-                                sifteo edmodo ifttt zimbra.
-                            </p> */}
+                          
                         </div>
                         {/* /.col */}
                         <div className="col-6">
@@ -102,7 +93,6 @@ class ShoppingList extends React.Component {
                                 <table className="table">
                                     <tbody>
                                         <tr>
-                                            {/* {console.log(currentProductos)} */}
                                             <th>Total: </th>
                                             <td><h3>$  {totalPrice}</h3></td>
                                         </tr>

@@ -3,7 +3,7 @@
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-            <h2>Acerca de Nosotros</h2>
+            <h2>{{ trans('menu.About us') }}</h2>
         </div>
 
         <div class="row content">

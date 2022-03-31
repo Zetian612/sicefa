@@ -14,8 +14,13 @@ return [
 	'People' => 'People',
 	'Personal data' => 'Personal data',
 	'Users' => 'Users',
-	'Credits' => 'Developers',
+	'Credits' => 'Credits',
 	'Form Contact' => 'Form Contact',
-	'Maps' => 'Maps',
+	'Map' => 'Map',
+	'Aplications' => 'Aplications',
+	'About us' => 'About us',
+	'Point of sale' => 'Point of sale',
+	'Watch Video' => 'Watch Video',
+	'Go to Cefamaps' => 'Go to Cefamaps'
 
 ];

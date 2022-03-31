@@ -1,8 +1,10 @@
 import React from "react";
 import moment from "moment";
-
+// import ProductsInvoice from "./ProductsInvoice";
+// import Imprimir from "../../components/Imprimir";
+// import Products from '../../components/Products';
 export default function ShowInvoice(props) {
-    const {icon, title, route, data, AddProducts, products} = props;
+    const {icon, title, data, SearchProducts, products} = props;
 
     return (
         <>
@@ -64,36 +66,25 @@ export default function ShowInvoice(props) {
                 {/* /.row */}
                 {/* Table row */}
                 <div className="row">
-                   {AddProducts}
+                   {SearchProducts}
                    <br />
-                   
+
                     {products}
                 </div>
                 {/* /.row */}
-
                 {/* this row will not appear when printing */}
                 <div className="row no-print">
                     <div className="col-12">
-                        <a
-                            href={route}
-                            // onClick={handleSubmitProduct}
-                            className="btn btn-default"
-                        >
+                    <form method="post" action="/register">
+                            <input type="hidden" name="people_id" value={data.id}/>
+                            <input type="hidden" name="product_id" />
+                            <input type="hidden" name="amount"/>
+                            <button type="submit" className="btn btn-default">
                             <i className="fas fa-print" /> Print
-                        </a>
-                        {/* <button
-                            type="button"
-                            className="btn btn-success float-right"
-                        >
-                            <i className="far fa-credit-card" /> Submit Payment
-                        </button>
-                        <button
-                            type="button"
-                            className="btn btn-primary float-right"
-                            style={{ marginRight: 5 }}
-                        >
-                            <i className="fas fa-download" /> Generate PDF
-                        </button> */}
+                            </button>
+                       
+                    </form>
+
                     </div>
                 </div>
             </div>

@@ -16,5 +16,11 @@ return [
 	'Users' => 'Usuarios',
 	'Credits' => 'Desarrolladores',
 	'Form Contact' => 'Formulario de contacto',
-	'Maps' => 'Ubicación',
+	'Map' => 'Mapas',
+	'Aplications' => 'Aplicaciones',
+	'About us' => 'Acerca de nosotros',
+	'Point of sale' => 'Punto de venta',
+	'Watch Video' => 'Ver video',
+	'Go to Cefamaps' => 'Ir a Cefamaps'
+	
 ];

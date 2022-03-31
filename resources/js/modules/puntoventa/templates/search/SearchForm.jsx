@@ -3,8 +3,6 @@ import Load from "../../components/Load";
 // import I18n from '../../../vendor/I18n';
 
 export default function SearchForm(props) {
-    // window.I18n = I18n;
-    // let translator = new I18n;
     return (
         <>
             <div className="card card-cafeto card-outline shadow">

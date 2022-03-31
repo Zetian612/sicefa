@@ -22,27 +22,8 @@ export default function SalesDetails() {
                                     <br></br>
                                         <div className="row justify-content-center">
                                             <div className="col-md-">
-                                    <Button variant="secondary" onClick={() => setClientShow(true)}>
-                                        Registrar
-                                    </Button>
-
-                                    <Modal show={clientShow} onHide={() => setClientShow(false)}>
-                                        <Modal.Header>
-                                        <Modal.Title>Agregar cliente</Modal.Title>
-                                        <Button variant="close" type="button" data-dismiss="modal" aria-label="Close" onClick={() => setSearchProductsShow(false)}>
-                                            <span aria-hidden="true">×</span>
-                                        </Button>
-
-                                        </Modal.Header>
-                                        <Modal.Body>
-                                    
-                                        </Modal.Body>
-                                        <Modal.Footer>
-                                        <Button variant="secondary" onClick={() => setClientShow(false)}>
-                                            Close
-                                        </Button>
-                                        </Modal.Footer>
-                                    </Modal>
+                                               {props.AddClientButton}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +32,6 @@ export default function SalesDetails() {
                     </div>
                 </div>
             </div>
-        </div>
         </>
     );
 }

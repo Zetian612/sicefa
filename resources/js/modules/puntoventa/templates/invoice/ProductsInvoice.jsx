@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function ProductsInvoice(props) {
     const { currentProductos, setCurrentProdcutos } = props;
@@ -43,26 +43,6 @@ export default function ProductsInvoice(props) {
         return total;
     }
 
-    // function handleSubmitProduct(event) {
-    //     event.preventDefault();
-
-    //     try {
-    //         this.setState({ isLoading: true });
-
-    //         const response = await axios.post(
-    //             `http://127.0.0.1:8000/cafeto/admin/sales/search/${this.state.value}`
-    //         );
-
-    //         this.setState({ client: response.data, errorMsg: "" });
-    //     } catch (error) {
-    //         this.setState({
-    //             errorMsg: "Error while loading data. Try again later.",
-    //         });
-    //     } finally {
-    //         this.setState({ isLoading: false });
-    //     }
-    // }
-
     {
         return (
             <>
@@ -89,7 +69,11 @@ export default function ProductsInvoice(props) {
                                         <td>
                                             El snort testosterone trophy driving
                                         </td>
-                                        <td></td>
+                                        <td>
+                                        <div className="col-12">
+                                            <input type="number" className="form-control"/>
+                                        </div>
+                                        </td>
                                         <td>{producto.precio}</td>
                                         <td>
                                             <span
@@ -137,6 +121,7 @@ export default function ProductsInvoice(props) {
                                 <table className="table">
                                     <tbody>
                                         <tr>
+                                            {console.log(currentProductos)}
                                             <th>Total:</th>
                                             <td>${getTotal()}</td>
                                         </tr>

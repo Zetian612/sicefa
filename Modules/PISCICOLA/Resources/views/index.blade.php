@@ -1,3 +1,4 @@
+{{-- index --}}
 @extends('piscicola::layouts.master')
 
 @section('content')

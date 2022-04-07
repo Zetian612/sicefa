@@ -1,11 +1,11 @@
 
-  <!-- Preloader  ->Precarga -->
+  <!-- Preloader  - Precarga -->
   <div class="preloader flex-column justify-content-center align-items-center" id="background-start">
     <img class="animation__wobble" src="{{ asset('piscicola/img/pez.png')}}" alt="Mipez"  width="35%">
   </div>
 
   <!-- Navbar -->
-  <nav class="main-header bg-secondary navbar navbar-expand navbar-white navbar-light"  id="nav"   >
+  <nav class="main-header bg-secondary navbar navbar-expand navbar-white navbar-light" style="height: 40px"  id="nav"   >
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -17,7 +17,7 @@
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         {{-- piscicola route in administrator view --}}
-        <a href="{{ route('cefa.piscicola.index') }}" class="nav-link {{ ! Route::is('cefa.piscicola.index') ?: 'active' }}" >Principal</a>
+        <a href="{{ route('cefa.piscicola.index') }}" class="nav-link {{ ! Route::is('cefa.piscicola.index') ?: 'active' }}" id="princ">Principal</a>
       </li>
     @guest
     @else
@@ -69,3 +69,4 @@
     </ul>
   </nav>
   <!-- /.navbar -->
+

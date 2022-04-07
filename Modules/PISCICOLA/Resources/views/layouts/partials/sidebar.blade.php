@@ -1,6 +1,6 @@
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar bg-dark elevation-2" style=" position:fixed  " >
+  <aside class="main-sidebar bg-dark elevation-3" style="position:fixed;">
     <!-- Brand Logo -->
       <!-- LOGO -->
      <center><img src="{{ asset('piscicola/img/pez.png')}}" width="50%"  alt="pez"  style="opacity: .8" ></center>
@@ -9,7 +9,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-0 mb-3 d-flex">
+      <div class="user-panel mt-3 pb-0 mb-3 d-flex"> 
         <div class="image">
           <img src="{{ asset('piscicola/img/user.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>

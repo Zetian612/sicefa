@@ -9,7 +9,17 @@
  </head>
  @include('piscicola::layouts.partials.head')
 
- <body class="hold-transition sidebar">
+ <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function() {
+     $('#princ').on('click', function() {
+         $("index").load('master.blade.php');
+         return false;
+     });
+ });
+ </script>
+
+ <body>
   <div class="wrapper">
         @include('piscicola::layouts.partials.navbar')
         @include('piscicola::layouts.partials.sidebar')
@@ -19,7 +29,7 @@
     <!-- Content Header (Page header) -->
     <div class="content-header" >
       <div class="container-fluid" >
-            <h1 class="display-4 text-dark" style="text-align:center; font-size:40px; box-shadow: 0px 5px 4px;">Control de Administración Piscicola</h1>
+            <h1 class="display-4 text-dark" style="text-align:center; font-size:40px; box-shadow: 0px 2px;">Control de Administración Piscicola</h1>
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->

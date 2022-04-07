@@ -1,7 +1,7 @@
 @extends('piscicola::layouts.master')
 
 @section('content')
-    <div class="container-fluid" style="margin: 0">
+    <div class="container-fluid">
         <div class="card">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner" style="height: 28rem;">
@@ -76,7 +76,7 @@
                     </p>
                 </div>
             </div>
-            <div class="card-e" style="width: 28rem; box-shadow: 2px 5px 10px; float:right;">
+            <div class="card-e" style="width: 35rem; margin-top:10px; box-shadow:2px 5px 10px; float:right;">
                 <img src="{{ asset('piscicola/img/black-tilapia.jpg') }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h1 class="card-title">Carpicultura</h1>
@@ -90,6 +90,7 @@
 
         </div>
     </div>
+
 
     @include('piscicola::layouts.partials.footer')
 

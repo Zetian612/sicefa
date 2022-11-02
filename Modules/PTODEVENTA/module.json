@@ -1,0 +1,13 @@
+{
+    "name": "PTODEVENTA",
+    "alias": "ptodeventa",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\PTODEVENTA\\Providers\\PTODEVENTAServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

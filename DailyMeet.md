@@ -45,8 +45,9 @@ _Cada proyecto debe editar este documento e incluir por cada Sprint._
 
 ### Sprint 1 🔄
 #### Sprint Planning 26-Oct-2022
-* **Integrante 1** - *Actividades a realizar* 
-* **Integrante 2** - *Actividades a realizar*
+* **Frankie yahir velasco cerquera** - *Configuracion del proyecto* 
+* **Oscar Andres Gil** - *Movimientos De Entrada*
+* **Cesar Augusto Pastrana** - *Login*
 ...
 #### Meet 28-Oct-2022
 * **Frankie yahir velasco cerquera** - *Actividades realizadas* - *Avance %* - *Dificultades* - *Acciones*
@@ -66,7 +67,7 @@ _Cada proyecto debe editar este documento e incluir por cada Sprint._
 #### Meet 04-Nov-2022
 * **Frankie yahir velasco cerquera** - *Actividades realizadas* - *Avance %* - *Dificultades* - *Acciones*
 * **Oscar Andres Gil** - *Actividades realizadas* - *Avance %* - *Dificultades* - *Acciones*
-* **Cesar Augusto pastrana** - *Actividades realizadas* - *Avance %* - *Dificultades* - *Acciones*
+* **Cesar Augusto pastrana** - *Actividades realizadas* - *Avance %* - *Dificultades* - *Acciones* *No Asistio*
 ---
 #### Meet 07-Nov-2022
 * **Frankie yahir velasco cerquera** - *Actividades realizadas* - *Avance %* - *Dificultades* - *Acciones*
